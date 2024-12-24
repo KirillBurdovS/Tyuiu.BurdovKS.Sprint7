@@ -88,7 +88,7 @@
             Controls.Add(buttonDone_BKS);
             Controls.Add(groupBoxDataUser);
             Name = "FormUpGradeEditor";
-            Text = "FormUpGradeEditor";
+            Text = "Спринт 7| Проект |Бурдов Кирилл Сергеевич";
             groupBoxDataUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewUser).EndInit();
             ResumeLayout(false);

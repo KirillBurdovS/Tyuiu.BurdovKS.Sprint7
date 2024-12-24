@@ -4,39 +4,49 @@
 
 
 
+using System.IO;
+
+
+
 namespace Tyuiu.BurdovKS.Sprint7.Project.V11.Lib
 {
     public class DataService
     {
 
-        public class Person
+        public Dictionary<string, int> AnalyzeHeight(string filePath) // Для роста 
         {
-            public string Name { get; set; }
-            public string Address { get; set; }
-            public DateTime BirthDate { get; set; }
-            public string Profession { get; set; }
-            public DateTime StartDate { get; set; }
-            public int SizeOfShoe { get; set; }
-            public int Height { get; set; }
-            public string University { get; set; }
-            public int Age { get; set; }
-            public string EyeColor { get; set; }
-        }
+            var heightCounts = new Dictionary<string, int>();
 
-        public static class Sorter
-        {
-            public static List<Person> SortByHeight(List<Person> people)
+            // Чтение данных из файла
+            var lines = File.ReadAllLines(filePath);
+            foreach (var line in lines)
             {
-                return people.OrderBy(p => p.Height).ToList();
+                var data = line.Split(',');
+                if (data.Length > 0)
+                {
+                    var height = data[0]; // Предположим, что рост находится в первой колонке
+                    if (heightCounts.ContainsKey(height))
+                    {
+                        heightCounts[height]++;
+                    }
+                    else
+                    {
+                        heightCounts[height] = 1;
+                    }
+                }
             }
 
-            public static List<Person> SortByShoeSize(List<Person> people)
-            {
-                return people.OrderBy(p => p.SizeOfShoe).ToList();
-            }
+            return heightCounts;
         }
+
+
+
+
+
+
     }
-
-
-
 }
+
+
+
+

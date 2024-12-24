@@ -30,14 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAbout));
             groupBoxAbout_BKS = new GroupBox();
-            pictureBoxAuthor_BKS = new PictureBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
             textBoxAuthor_BKS = new TextBox();
+            pictureBoxAuthor_BKS = new PictureBox();
             groupBoxAbout_BKS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxAuthor_BKS).BeginInit();
             SuspendLayout();
             // 
             // groupBoxAbout_BKS
             // 
+            groupBoxAbout_BKS.Controls.Add(textBox2);
+            groupBoxAbout_BKS.Controls.Add(textBox1);
             groupBoxAbout_BKS.Controls.Add(textBoxAuthor_BKS);
             groupBoxAbout_BKS.Controls.Add(pictureBoxAuthor_BKS);
             groupBoxAbout_BKS.Location = new Point(12, 12);
@@ -46,6 +50,41 @@
             groupBoxAbout_BKS.TabIndex = 0;
             groupBoxAbout_BKS.TabStop = false;
             groupBoxAbout_BKS.Text = "Об авторе";
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = SystemColors.Menu;
+            textBox2.BorderStyle = BorderStyle.None;
+            textBox2.Location = new Point(230, 87);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(238, 21);
+            textBox2.TabIndex = 3;
+            textBox2.Text = "Учебная группа: СМАРТб 24-1";
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = SystemColors.Menu;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.ForeColor = Color.Black;
+            textBox1.Location = new Point(230, 63);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(238, 23);
+            textBox1.TabIndex = 2;
+            textBox1.Text = "Студент 1 курса ВШЦТ";
+            // 
+            // textBoxAuthor_BKS
+            // 
+            textBoxAuthor_BKS.BackColor = SystemColors.Menu;
+            textBoxAuthor_BKS.BorderStyle = BorderStyle.None;
+            textBoxAuthor_BKS.Location = new Point(230, 42);
+            textBoxAuthor_BKS.Multiline = true;
+            textBoxAuthor_BKS.Name = "textBoxAuthor_BKS";
+            textBoxAuthor_BKS.Size = new Size(321, 24);
+            textBoxAuthor_BKS.TabIndex = 1;
+            textBoxAuthor_BKS.TabStop = false;
+            textBoxAuthor_BKS.Text = "Разработчик: Бурдов Кирилл Сергеевич";
             // 
             // pictureBoxAuthor_BKS
             // 
@@ -56,25 +95,17 @@
             pictureBoxAuthor_BKS.TabIndex = 0;
             pictureBoxAuthor_BKS.TabStop = false;
             // 
-            // textBoxAuthor_BKS
-            // 
-            textBoxAuthor_BKS.BackColor = SystemColors.Menu;
-            textBoxAuthor_BKS.BorderStyle = BorderStyle.None;
-            textBoxAuthor_BKS.Location = new Point(230, 53);
-            textBoxAuthor_BKS.Multiline = true;
-            textBoxAuthor_BKS.Name = "textBoxAuthor_BKS";
-            textBoxAuthor_BKS.Size = new Size(321, 37);
-            textBoxAuthor_BKS.TabIndex = 1;
-            textBoxAuthor_BKS.Text = "Программу выполнил студент группы СМАРТб 24 -1  Бурдов Кирилл Сергеевич";
-            // 
             // FormAbout
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(575, 450);
             Controls.Add(groupBoxAbout_BKS);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FormAbout";
-            Text = "FormAbout";
+            Text = "Спринт 7| Проект |Бурдов Кирилл Сергеевич";
             groupBoxAbout_BKS.ResumeLayout(false);
             groupBoxAbout_BKS.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxAuthor_BKS).EndInit();
@@ -86,5 +117,7 @@
         private GroupBox groupBoxAbout_BKS;
         private TextBox textBoxAuthor_BKS;
         private PictureBox pictureBoxAuthor_BKS;
+        private TextBox textBox1;
+        private TextBox textBox2;
     }
 }

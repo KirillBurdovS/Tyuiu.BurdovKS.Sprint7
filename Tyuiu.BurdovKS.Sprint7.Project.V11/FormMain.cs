@@ -78,5 +78,14 @@ namespace Tyuiu.BurdovKS.Sprint7.Project.V11
 
 
         }
+
+        private void buttonGrap_BKS_Click(object sender, EventArgs e)
+        {
+            FormGraph formEdit = new FormGraph();
+            formEdit.StartPosition = FormStartPosition.Manual;
+            formEdit.Location = this.Location;
+            formEdit.ShowDialog();
+
+        }
     }
 }

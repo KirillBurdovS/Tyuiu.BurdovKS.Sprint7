@@ -73,19 +73,21 @@
             buttonGrap_BKS.TabIndex = 3;
             buttonGrap_BKS.Text = "График";
             buttonGrap_BKS.UseVisualStyleBackColor = true;
+            buttonGrap_BKS.Click += buttonGrap_BKS_Click;
             // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(273, 303);
+            ClientSize = new Size(266, 297);
             Controls.Add(buttonGrap_BKS);
             Controls.Add(buttonPeople_BKS);
             Controls.Add(buttonAbout_BKS);
             Controls.Add(textBoxOgl_BKS);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormMain";
-            Text = "Form1";
-            WindowState = FormWindowState.Maximized;
+            Text = "Спринт 7| Проект |Бурдов Кирилл Сергеевич";
+            WindowState = FormWindowState.Minimized;
             ResumeLayout(false);
             PerformLayout();
         }
